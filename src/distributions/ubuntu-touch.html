@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ubuntu Touch · מובייל לינוקס ישראל</title>
+<meta name="description" content="מצב Ubuntu Touch: אפליקציות עובדות ושירותים ישראליים שנבדקו.">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<!-- DISTRO TEMPLATE: copy this file (e.g. postmarketos.html), edit the tables, and add a card in index.html. -->
+<header>
+  <nav>
+    <a href="/src/index.html">בית</a>
+    <a href="/src/distributions/index.html">הפצות לינוקס</a>
+    <a class="tg-btn" href="https://t.me/+HJlhVhZYEx5jYjc0" target="_blank" rel="noopener">טלגרם</a>
+  </nav>
+</header>
+
+<main>
+  <p class="meta"><a href="/src/distributions/index.html">→ כל ההפצות</a></p>
+  <h1>Ubuntu Touch</h1>
+  <p class="meta">הפצה מעת UBports · <a href="https://ubuntu-touch.io/" target="_blank" rel="noopener">ubuntu-touch.io</a></p>
+  <p>מצב האפליקציות החיוניות והשירותים הישראליים על Ubuntu Touch. מקרא:
+    <span class="badge ok">עובד</span>
+    <span class="badge warn">חלקי</span>
+    <span class="badge bad">לא עובד</span>
+  </p>
+
+  <h2>ספק סלולר</h2>
+  <table class="status-table">
+    <thead>
+      <tr><th>Provider</th><th>Calls</th><th>SMS/MMS</th><th>Roaming/Data</th><th>VoLTE</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Partner</td><td><span class="badge ok">עובד</span></td><td><span class="badge ok">עובד</span></td><td><span class="badge ok">עובד</span></td><td><span class="badge ok">עובד</span></td><td>בשימוש יומיומי כבר כמעט שנתיים.</td></tr>
+    </tbody>
+  </table>
+  <p>כרגע eSIM מיושם אך זקוק לליטוש לפני שחרור. בפועל זה אומר שיהיה לנו eSIM בעוד כמה חודשים, אך פחות מחצי שנה.</p>
+
+  <h2>אפליקציות מקוריות (Native)</h2>
+  <p>אפליקציות ושירותים שרצים באופן ישיר על Ubuntu Touch.</p>
+  <table class="status-table">
+    <thead>
+      <tr><th>אפליקציה / שירות</th><th>מצב</th><th>הערות</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>דפדפן</td><td><span class="badge ok">עובד</span></td><td>ל-Ubuntu Touch יש את דפדפן Morph שמבוסס על Chromium (ותומך ב-DRM) ועוד חלופות רבות.</td></tr>
+      <td>וואטסאפ</td><td><span class="badge ok">עובד</span></td><td>יש קליינטים ל-Whatsapp Web אם נוטיפיקציות ושיחות אפשר לראות <a href="https://next.open-store.io/apps/#search=whatsapp&sort=relevance">כאן</a>.</td></tr>
+      <td>טלגרם</td><td><span class="badge warn">חלקי</span></td><td><a href="https://next.open-store.io/app/teleports.ubports/">הקליינט הרישמי</a> לא יכול לעשות שיחות ריאקציות או לראות טופיקים אבל הוא היחידי שיש לו נוטיפיקציות</td></tr>
+    </tbody>
+  </table>
+
+  <h2>אפליקציות Waydroid</h2>
+  <p>אפליקציות ושירותי אנדרואיד שרצים דרך Waydroid. ללא שירותי Play כברירת מחדל.</p>
+  <p>Waydroid אינו תומך בהעברת מיקום, כך שכל דבר שמבוסס מיקום לא יעבוד.</p>
+  <p>אם צריך תמיכת NFC ב-Waydroid יש להריץ את הפקודה "waydroid prop set persist.waydroid.uevent true" ולהפעיל מחדש את Waydroid במידת הצורך.</p>
+  <table class="status-table">
+    <thead>
+      <tr><th>אפליקציה / שירות</th><th>מצב</th><th>הערות</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="https://play.google.com/store/apps/details?id=com.ideomobile.discount&hl=en">בנק דיסקונט</a></td><td><span class="badge warn">חלקי</span></td><td>האפליקציה עובדת ב-Waydroid אך ללא כניסה בטביעת אצבע.</td></tr>
+      <tr><td><a href="https://play.google.com/store/apps/details?id=com.pcentra.ravkavonlinemobile">רב-קו אונליין</a></td><td><span class="badge ok">עובד</span></td><td>אפליקציית האנדרואיד עובדת ב-Waydroid (דורשת "waydroid prop set persist.waydroid.uevent true"). אני יבנה אפליקציית טעינת רב-קו מקורית, כבר ביצעתי הנדסה לאחור של מה שצריך — ראו: <a href="https://github.com/ChromiumOS-Guy/OpenKav">openkav</a></td></tr>
+    </tbody>
+  </table>
+
+  <p class="meta">משהו לא נכון או לא עובד אצלכם? ספרו לנו ב<a href="https://t.me/+HJlhVhZYEx5jYjc0" target="_blank" rel="noopener">טלגרם</a> ונעדכן את הטבלה.</p>
+</main>
+
+<footer>
+  קהילת מובייל לינוקס בישראל · מתוחזק על ידי הקהילה · <a href="https://t.me/+HJlhVhZYEx5jYjc0" target="_blank" rel="noopener">טלגרם</a>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>
